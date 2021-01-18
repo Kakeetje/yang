@@ -1,6 +1,10 @@
 import React from 'react';
+import Index from "../Components/LoginForms/";
 
-function Login() {
-    return <h2>Login</h2>;
+export default function Login() {
+    return <div>
+    <h2>Login</h2>
+    <Index />
+    </div>;
 }
 

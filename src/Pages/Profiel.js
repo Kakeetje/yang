@@ -1,5 +1,5 @@
 import React from 'react';
 
-function Profiel() {
+export default function Profiel() {
     return <h2>Profiel</h2>;
 }

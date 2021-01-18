@@ -52,8 +52,6 @@
     [ ]Validatie & Feedback
         [ ]validatie (alles goed invullen)
         [ ]Stukje feedback
-[ ]Sign up
-
 Linken aan het eind
 - Css kanaal
 - oh my zsh
