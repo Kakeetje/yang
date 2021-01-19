@@ -10,6 +10,7 @@ import Acties from './Pages/Acties'
 import Contact from './Pages/Contact'
 import Login from './Pages/Login'
 import Profiel from './Pages/Profiel'
+import RegisterForms from "./Components/LoginForms/RegisterForms";
 
 export default function App() {
   return (
@@ -32,6 +33,9 @@ export default function App() {
               <li>
                 <Link to="/profile">Profiel</Link>
               </li>
+              <li>
+                <Link to="/register">Registreren</Link>
+              </li>
             </ul>
           </nav>
 
@@ -52,6 +56,9 @@ export default function App() {
             </Route>
             <Route path="/profile">
               <Profiel />
+            </Route>
+            <Route path="/register">
+              <RegisterForms />
             </Route>
             <Route path="/">
               <h1>404, Page not found</h1>
