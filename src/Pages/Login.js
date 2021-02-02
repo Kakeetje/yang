@@ -7,4 +7,5 @@ export default function Login() {
     <Index />
     </div>;
 }
+//dit kan je later gebruiken voor begin page, wanneer users moeten kiezen of ze willen inloggen of registreren. Dus een switch pagina
 
