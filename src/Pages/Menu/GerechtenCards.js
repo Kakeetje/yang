@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './GerechtenCards.css';
+import SideBar from "../../Components/SideBar/SideBar";
 
 export default function GerechtenCards(props) {
     const [gerecht, setGerecht] = useState();

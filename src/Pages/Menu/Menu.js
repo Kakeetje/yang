@@ -3,6 +3,10 @@ import axios from "axios";
 import GerechtenCards from './GerechtenCards';
 import './Menu.css';
 import Chopsticks from '../../Assets/Chopsticks-for-Loading.gif';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import NavBar from "../../Components/SideBar/NavBar";
+import SideBar from "../../Components/SideBar/SideBar";
+
 
 export default function Menu() {
     const [gerechten, setGerechten] = useState(null);
@@ -36,17 +40,36 @@ export default function Menu() {
             <div className="Menu">
                 <h1>Bekijk onze Menu</h1>
             </div>
-            <div className="Gerechten">
-                <button disabled={pagina === 0} onClick={() => setPagina(pagina - 20)}>
+            <div className="next-previous">
+                <button
+                    disabled={pagina === 0}
+                    onClick={() => setPagina(pagina - 20)}>
                     Vorige
                 </button>
-                <button disabled={pagina === 1100} onClick={() => setPagina(pagina + 20)}>
+                <button
+                    disabled={pagina === 1100}
+                    onClick={() => setPagina(pagina + 20)}>
                     Volgende
                 </button>
-                {gerechten?.map((gerecht) => {
-                    return <GerechtenCards key={gerecht.name} name={gerecht.name} />
-                })}
             </div>
+                <div className="gerechten">
+                    {gerechten?.map((gerecht) => {
+                        return <GerechtenCards key={gerecht.name} name={gerecht.name} />
+                    })}
+                </div>
+
+            {/*sidebar hier*/}
+            <Router>
+                <NavBar />
+                <Switch>
+                    <SideBar />
+                    <Route path='/menu/nigiri'/>
+                    <Route path='/menu/hosomaki'/>
+                    <Route path='/menu/urumaki'/>
+                    <Route path='/menu/crispyrolls'/>
+                    <Route path='/menu/bijgerechten'/>
+                </Switch>
+            </Router>
         </>
         );
     }
