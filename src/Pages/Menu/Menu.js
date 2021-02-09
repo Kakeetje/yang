@@ -3,10 +3,9 @@ import axios from "axios";
 import GerechtenCards from './GerechtenCards';
 import './Menu.css';
 import Chopsticks from '../../Assets/Chopsticks-for-Loading.gif';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NavBar from "../../Components/SideBar/NavBar";
-import SideBar from "../../Components/SideBar/SideBar";
-
+/*import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+*/
 
 export default function Menu() {
     const [gerechten, setGerechten] = useState(null);
@@ -37,6 +36,7 @@ export default function Menu() {
     } else {
         return (
         <>
+            <NavBar />
             <div className="Menu">
                 <h1>Bekijk onze Menu</h1>
             </div>
@@ -59,7 +59,7 @@ export default function Menu() {
                 </div>
 
             {/*sidebar hier*/}
-            <Router>
+          {/*  <Router>
                 <NavBar />
                 <Switch>
                     <SideBar />
@@ -69,7 +69,7 @@ export default function Menu() {
                     <Route path='/menu/crispyrolls'/>
                     <Route path='/menu/bijgerechten'/>
                 </Switch>
-            </Router>
+            </Router>*/}
         </>
         );
     }

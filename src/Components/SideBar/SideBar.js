@@ -1,44 +1,22 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
-import * as GiIcons from 'react-icons/gi';
+import { slide as Menu } from 'react-burger-menu';
+import './SideBar.css';
 
-
-export default function SideBar() {
-    const sideMenu = [{
-        title: 'Nigiri',
-        path: '/menu/nigiri',
-        icon: <GiIcons.GiSushis />,
-        cName: 'nav-text'
-    },
-        {
-            title: 'Hosomaki',
-            path: '/menu/hosomaki',
-            icon: <GiIcons.GiShrimp />,
-            cName: 'nav-text'
-        },
-        {
-            title: 'Urumaki',
-            path: '/menu/urumaki',
-            icon: <FaIcons.FaBacon />,
-            cName: 'nav-text'
-        },
-        {
-            title: 'Crispy Rolls',
-            path: '/menu/crispyrolls',
-            icon: <AiIcons.AiFillApple />,
-            cName: 'nav-text'
-        },
-        {
-            title: 'Bijgerechten',
-            path: '/menu/bijgerechten',
-            icon: <IoIcons.IoIosBeer />,
-            cName: 'nav-text'
-        }]
-    SideBar(sideMenu);
-}
-
-
-
-
+export default props => {
+    return (
+        <Menu>
+            <a className="menu-item" href="/nigiri">
+                Nigiri
+            </a>
+            <a className="menu-item" href="/hosomaki">
+                Hosomaki
+            </a>
+            <a className="menu-item" href="/urumaki">
+                Urumaki
+            </a>
+            <a className="menu-item" href="/crispyrolls">
+                Crispy Rolls
+            </a>
+        </Menu>
+    );
+};
